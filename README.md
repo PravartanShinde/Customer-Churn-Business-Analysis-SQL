@@ -3,6 +3,7 @@
 > **A business-oriented SQL project that investigates customer churn by testing hypotheses related to customer behavior, purchasing patterns, and Customer Lifetime Value (CLV) using SQL.**
 
 ![SQL](https://img.shields.io/badge/SQL-MySQL-blue)
+![Tool](https://img.shields.io/badge/Tool-DBeaver-informational)
 ![Business Analysis](https://img.shields.io/badge/Focus-Business%20Analysis-success)
 ![Methodology](https://img.shields.io/badge/Approach-Hypothesis--Driven-orange)
 
@@ -51,9 +52,12 @@ The objective of this project is to investigate customer churn by comparing the 
 
 # 📂 Dataset
 
-**Source:** Kaggle – *E-commerce Customer Churn Dataset*
+**Source:** [Synthetic E-Commerce Customer Behavior Dataset (Kaggle)](https://www.kaggle.com/datasets/lorenzoscaturchio/ecommerce-behavior)
+
+> **Development Environment:** All SQL queries were written and executed using **DBeaver** connected to a **MySQL 8.0** database.
 
 The analysis was performed on a relational e-commerce database consisting of five interconnected tables.
+
 
 | Table           | Description                                                                |
 | --------------- | -------------------------------------------------------------------------- |
@@ -75,6 +79,25 @@ The analysis was performed on a relational e-commerce database consisting of fiv
 | Customer Churn Rate     |  16.94% |
 
 ---
+## 🗂 Database Schema
+
+The project uses a relational e-commerce database consisting of five interconnected tables.
+
+| Table | Primary Key | Description |
+|--------|-------------|-------------|
+| customers | customer_id | Customer information, churn status, and Customer Lifetime Value (CLV) |
+| sessions | session_id | Browsing sessions and cart activity |
+| transactions | transaction_id | Purchase transactions |
+| products | product_id | Product catalog |
+| reviews | review_id | Customer product reviews |
+
+### Relationships
+
+- `customers.customer_id` ↔ `sessions.customer_id`
+- `customers.customer_id` ↔ `transactions.customer_id`
+- `products.product_id` ↔ `transactions.product_id`
+- `customers.customer_id` ↔ `reviews.customer_id`
+- `products.product_id` ↔ `reviews.product_id`
 
 # 🔬 Methodology
 
@@ -187,7 +210,28 @@ Based on the findings of this analysis:
 * Business-Oriented SQL Analysis
 
 ---
+## 🚀 How to Run the Project
 
+### Prerequisites
+
+- MySQL 8.0 or later
+- DBeaver (or any SQL client compatible with MySQL)
+
+### Setup Instructions
+
+1. Clone or download this repository.
+2. Download the dataset from Kaggle:
+   https://www.kaggle.com/datasets/lorenzoscaturchio/ecommerce-behavior
+3. Import the CSV files into a MySQL database using DBeaver.
+4. Ensure the following tables are available:
+   - `customers`
+   - `products`
+   - `transactions`
+   - `sessions`
+   - `reviews`
+5. Open `customer_churn_analysis.sql`.
+6. Execute the SQL queries sequentially.
+7. Compare the outputs with the findings documented in this README.
 # 📁 Repository Structure
 
 ```text
@@ -202,6 +246,12 @@ customer-churn-analysis-sql/
 - Average-based metrics were used throughout the analysis; future work could incorporate median-based comparisons and distributional analysis for variables that may be skewed.
 
 ---
+## 🚀 Future Improvements
+
+- Compare mean and median for potentially skewed variables.
+- Assess the impact of outliers on average-based metrics.
+- Perform data quality checks for missing and duplicate records.
+- Extend the analysis with statistical significance testing where appropriate.
 
 # 🎯 Conclusion
 
