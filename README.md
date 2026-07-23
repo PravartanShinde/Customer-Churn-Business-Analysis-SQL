@@ -250,7 +250,6 @@ customer-churn-analysis-sql/
 
 - Compare mean and median for potentially skewed variables.
 - Assess the impact of outliers on average-based metrics.
-- Perform data quality checks for missing and duplicate records.
 - Extend the analysis with statistical significance testing where appropriate.
 
 # 🎯 Conclusion
