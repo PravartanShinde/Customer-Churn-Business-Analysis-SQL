@@ -196,6 +196,10 @@ customer-churn-analysis-sql/
 ├── customer_churn_analysis.sql
 └── README.md
 ```
+## 📌 Limitations
+
+- The analysis primarily compares churned and retained customers using descriptive statistics.
+- Average-based metrics were used throughout the analysis; future work could incorporate median-based comparisons and distributional analysis for variables that may be skewed.
 
 ---
 
