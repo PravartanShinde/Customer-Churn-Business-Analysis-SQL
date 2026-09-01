@@ -196,6 +196,30 @@ Based on the findings of this analysis:
 
 ---
 
+# 📊 Power BI Dashboard
+
+The findings from the SQL analysis were translated into an interactive Power BI dashboard designed to present the churn story from a business perspective.
+
+The dashboard is structured across three pages:
+
+### 1. Churn Overview
+Provides a high-level view of customer churn, including the overall churn rate and where churn is concentrated across customer segments and geographic markets.
+
+### 2. Churn Drivers
+Examines behavioral differences between churned and retained customers, focusing on browsing behavior, purchase frequency, and customer spending.
+
+### 3. Retention Priorities
+Translates the analytical findings into potential retention priorities by examining customer engagement, Customer Lifetime Value (CLV), and high-value customers across segments.
+
+### Dashboard File
+
+The Power BI dashboard file is available in this repository:
+
+**`Customer churn dashboard.pbix`**
+
+> GitHub does not provide an in-browser preview for `.pbix` files. Download the file and open it using Microsoft Power BI Desktop to explore the interactive dashboard.
+> --
+
 # 🛠 SQL Concepts Demonstrated
 
 * Common Table Expressions (CTEs)
