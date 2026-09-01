@@ -4,6 +4,7 @@
 
 ![SQL](https://img.shields.io/badge/SQL-MySQL-blue)
 ![Tool](https://img.shields.io/badge/Tool-DBeaver-informational)
+![Power BI](https://img.shields.io/badge/Visualization-Power%20BI-yellow)
 ![Business Analysis](https://img.shields.io/badge/Focus-Business%20Analysis-success)
 ![Methodology](https://img.shields.io/badge/Approach-Hypothesis--Driven-orange)
 
